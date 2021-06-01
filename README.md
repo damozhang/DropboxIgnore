@@ -4,7 +4,7 @@ This is a tool for developers who use Dropbox,  which can help you ignore node_m
 
 ## How to use it
 ```
-> ./dropbox-ignore.sh ~/Developer/project
+> ./dropbox-ignore.sh ~/Dropbox/project
 ```
 This command will ignore node_modules, vendor, or Pods if a package.json, composer.json, or Podfile be found in the directory you provide.
 
@@ -17,7 +17,7 @@ You can move it to /usr/bin, /bin,  or any path in your environment to execute i
 ```
 > mv dropbox-ignore.sh /bin/dropbox-ignore
 
-> dropbox-ignore ~/Developer/project
+> dropbox-ignore ~/Dropbox/project
 ```
 
 
@@ -25,5 +25,5 @@ You can move it to /usr/bin, /bin,  or any path in your environment to execute i
 
 If you just want to ignore a specific directory or file, you should use the following command which is from Dropbox official.
 ```
-> xattr -w com.dropbox.ignored 1 "$filepath"
+> xattr -w com.dropbox.ignored 1 ~/Dropbox/project/node_modules
 ```
