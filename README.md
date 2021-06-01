@@ -27,3 +27,7 @@ If you just want to ignore a specific directory or file, you should use the foll
 ```
 > xattr -w com.dropbox.ignored 1 ~/Dropbox/project/node_modules
 ```
+
+## Notice
+
+This script was only tested on MacOS 11.4.
