@@ -12,10 +12,10 @@ Also, it will automatically created a node_modules, vendor, or Pods if **necessa
 
 ## Use it like a system command
 
-You can move it to /usr/bin, /bin,  or any path in your environment to execute it like a system command.
+You can move it to /usr/bin, /usr/local/bin, /bin, ~/bin,  or any path in your environment to execute it like a system command.
 
 ```
-> mv dropbox-ignore.sh /bin/dropbox-ignore
+> sudo mv dropbox-ignore.sh /usr/local/bin/dropbox-ignore
 
 > dropbox-ignore ~/Dropbox/project
 ```
