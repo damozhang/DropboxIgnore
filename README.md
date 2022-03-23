@@ -2,6 +2,14 @@
 This is a tool for developers who use Dropbox,  which can help you ignore node_modules, vendor, or Pods conveniently.
 
 
+## Dropbox for macOS 12
+Having updated Dropbox to the latest beta version, I noticed `xattr -w com.dropbox.ignored 1 {path}` does not work.
+
+Something has been changed:
+- The Dropbox directory has been moved to `~/Library/CloudStorage/Dropbox` (You can find it in `~/.dropbox/info.json`)
+- Use `xattr -w com.apple.fileprovider.ignore#P 1 {path}` to ignore file or directory
+
+
 ## How to use it
 ```
 > ./dropbox-ignore.sh ~/Dropbox/project
