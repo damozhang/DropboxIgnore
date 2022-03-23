@@ -26,6 +26,7 @@ if [ -d "$filepath" ]; then
         fi
 
         xattr -w com.dropbox.ignored 1 "$filepath/$VENDOR_DIR"
+        xattr -w com.apple.fileprovider.ignore#P 1 "$filepath/$VENDOR_DIR"
         echo "$filepath/$VENDOR_DIR has been added to ignore list of Dropbox"
     fi
 
@@ -41,6 +42,7 @@ if [ -d "$filepath" ]; then
         fi
 
         xattr -w com.dropbox.ignored 1 "$filepath/$POD_DIR"
+        xattr -w com.apple.fileprovider.ignore#P 1 "$filepath/$POD_DIR"
         echo "$filepath/$POD_DIR has been added to ignore list of Dropbox"
     fi
 
@@ -56,6 +58,7 @@ if [ -d "$filepath" ]; then
         fi
 
         xattr -w com.dropbox.ignored 1 "$filepath/$NODE_DIR"
+        xattr -w com.apple.fileprovider.ignore#P 1 "$filepath/$NODE_DIR"
         echo "$filepath/$NODE_DIR has been added to ignore list of Dropbox"
     fi
 
