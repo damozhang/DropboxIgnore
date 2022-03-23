@@ -2,14 +2,19 @@
 
 filepath=$1
 
+COMPOSER_FILE='composer.json'
 VENDOR_DIR='vendor'
+
+PACKAGE_FILE='package.json'
 NODE_DIR='node_modules'
+
+POD_FILE='Podfile'
 POD_DIR='Pods'
 
 if [ -d "$filepath" ]; then
     echo "$filepath is a directory."
+    
     # check if the directory include a php composer project
-    COMPOSER_FILE='composer.json'
     if test -f "$filepath/$COMPOSER_FILE"; then
         echo "$COMPOSER_FILE has been found."
         if [ -d "$filepath/$VENDOR_DIR" ]; then
@@ -25,7 +30,6 @@ if [ -d "$filepath" ]; then
     fi
 
     # check if the directory include a CocoaPod project
-    POD_FILE='Podfile'
     if test -f "$filepath/$POD_FILE"; then
         echo "$POD_FILE has been found."
         if [ -d "$filepath/$POD_DIR" ]; then
@@ -41,7 +45,6 @@ if [ -d "$filepath" ]; then
     fi
 
     # check if the directory include a node.js project
-    PACKAGE_FILE='package.json'
     if test -f "$filepath/$PACKAGE_FILE"; then
         echo "$PACKAGE_FILE has been found."
         if [ -d "$filepath/$NODE_DIR" ]; then
